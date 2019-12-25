@@ -1,0 +1,54 @@
+docker search 软件名 //搜索要下载的软件
+docker pull 软件名(:tag)//下载软件
+docker images //查看拉取的镜像
+	docker images -q //查看所有的镜像的id
+docker rmi（remove image） （-rf） 软件名 //删除镜像
+	docker rmi ${docker images -q} //删除所有的镜像
+docker ps //查看正在运行的容器
+	docker ps -a //查看所有的容器包括停止中容器
+	docker ps -aq //查看所有的容器包括停止中容器的id
+docker rm 容器名 //删除容器
+	docker rm $（docker ps -aq）//删除所有的容器，测试了一下，好像不行
+docker run/stop 容器名称 //启动一个容器的主线程
+	docker run -d（detath） --name tomcat -p（publish list/publish-all） 8888:8080 tomcat //创建启动一个容器
+docker inspect 容器名 //查看一个容器的详细信息
+docker exec -it 容器名 /bin/bash	//进入运行的容器中，ctrl+d退出时容器不会关闭
+docker attach  容器名	//进入一个容器，退出时关闭容器	
+docker run -it --name centos -v（volume） /usr/local/d_data:/usr/local/c_data centos //创建运行容器并设置数据卷	//-i以交互模式运行容器，通常与 -t 同时使用	-t: 为容器重新分配一个伪输入终端
+docker start 容器名	//运行一个设置好的容器
+tip：ctrl + q + p	//在不关闭容器的情况下退出容器
+
+1.docker容器镜像卷
+docker commit 容器名称 创建的容器名称:tag
+docker build -f file名称 -t 镜像名称 .  //注意最后有个点，表示当前路径
+docker  info  //查看docker信息，包括有几个容器和镜像
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

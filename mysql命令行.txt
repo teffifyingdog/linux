@@ -1,0 +1,17 @@
+status; //查看MySQL版本
+select version();//查看MySQL版本
+CREATE INDEX index_id ON user(id)； //创建单例索引
+CREATE INDEX index_id_username_password ON user(id,username,password)	//创建多例索引
+DROP INDEX index_id ON user	//删除索引
+ALTER TABLE user ADD UNIQUE(username)	//唯一索引
+ALTER TABLE user ADD FULLTEXT fulltext_username(username)	//全文索引
+show index from `user`	//查看索引
+show engines;	//查看MySQL引擎信息
+
+
+
+
+
+
+
+

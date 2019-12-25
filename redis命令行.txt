@@ -1,0 +1,32 @@
+http://redisdoc.com/index.html
+redis-cli -h 192.168.252.222 -p 6379	//连接redis，要装redis客户端，-h（host），-p（port）
+	redis-cli -h 192.168.252.222 -p 6379 get nigger	//快速获得某个值
+	redis-cli	//可以直接这样进入控制台
+redis-cli ping	//确认redis是否运行，如果运行返回PONG
+exists key		//是否存在这个key，存在返回1，不存在返回0
+type key		//返回key的数据类型
+rename key newkey	//修改key的名称,如果新的key已存在，会覆盖
+	rename key newkey		//修改key的名称,如果新的key已存在，返回1，会返回0
+move key db	//移动key到另一个数据库
+del key1 key2 key3	//删除key，返回删除了多少个key
+randomkey	//随机返回数据库里的一个key
+dbsize		//返回数据库里key的数量
+keys 正则表达式	//查询某些key
+	keys *	//查询所有key
+sort listkey	//对集合从小到大排序，可以和其他的命令合在一起用，有点像mysql查询数据
+	sort listkey	//从大到小
+flushdb	//清空当前数据库所有的key
+flushall	//清空所有数据库所有的key
+select db	//切换数据库，默认的数据库为0，默认有0-15，16个数据库
+swapdb db1 db2	//对调两个数据库的数据
+
+
+
+
+
+
+
+
+
+
+

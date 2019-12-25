@@ -1,0 +1,37 @@
+ctrl + alt + v自动补全等号
+ctrl + j 各种循环
+	iter foreach
+	itli  list for循环
+	itar array for循环
+ctrl + space 基本代码提示
+ctrl + shift + space 高级代码提示
+f2/shift+ f2 移动到错误代码
+alt + enter 快速修复
+alt + shift + enter 自动补全代码
+ctrl + r 替换
+ctrl + alt +s 复制文件名？
+alt + insert get和set方法
+ctrl + H
+ctrl + alt + shift +n 查找类
+soutv 快速输出变量
+psvm 快速生成main方法
+alt + shift +鼠标 多选
+shift + shift 快速查找跳转
+ctrl + enter /alt + enter 运行sql语句
+ctrl + h 查看继承关系
+ctrl + alt + u 查看继承和接口关系
+ctrl + o 重写方法
+ctrl + shift +/ 将选中的代码注释到/**/或生成/**/
+ctrl + alt + l代码格式化
+ctrl + alt +b快速跳转到实现的方法
+ctrl + alt + t快速try catch等等
+soutp 输出方法参数
+soutm 输出类。方法名
+iter 增强for循环
+itar for循环
+itli 遍历list集合
+ctrl + shift + f 全局搜索
+ctrl + shift + r 全局替换
+ctrl + shift + entry 快速生成大括号
+ctrl + shift + 左右 上一步下一步
+Ctrl + Alt + 鼠标左键 到实现类

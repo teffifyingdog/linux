@@ -1,0 +1,95 @@
+ping www。baidu.com 测试是否联网。。。。
+ifconfig 查看ip地址
+who am i  查看当前账号
+su xxxx(账号名，超级管理员不需要密码) 	切换账号
+pwd 打印当前文件的路径
+cd / 进入根路径
+	cd root 进入root文件夹
+	cd ..返回上一级路径
+	cd ../..返回上上路劲
+	cd x(tab) 自动提示
+	cd ~用户加路径（/home/用户名）
+ll（ls -l标准） 查看当前文件下的所有文件
+	ll -a查看隐藏文件
+	ll user 打印user下的文件
+	ls只显示文件名
+	- 开头是文件
+	d 开头是文件夹
+clear 清屏
+mkdir 文件夹名 在当前目录上创建一个文件夹
+	mkdir -p a/b/c 级联创建文件
+rm 文件名 删除文件
+	rm -f（force）文件名 忽略不存在的文件
+	rm -r 文件夹名 删除文件夹，会有提示是否删除子文件
+	rm -rf 删除文件夹，没有提示
+	rm -rf /* 删库跑路
+cp 要复制的文件路径和文件名 要复制到的路径
+	。/当前路径
+	cp -r（recursive） 要复制的文件夹路径和文件夹名 要复制到的路径 //会复制文件夹里的子文件
+	cp -p（preserve） 要复制的文件夹路径和文件夹名 要复制到的路径 //会把访问权限也复制过去
+	cp -d （dereference）要复制的文件夹路径和文件夹名 要复制到的路径 //会保留该文件的连接？相当于windows的快捷方式？
+	cp -a 要复制的文件夹路径和文件夹名 要复制到的路径 //相当于 cp-dpr
+mv 要剪切·的文件夹路径和文件夹名 要复制到的路径
+	mv ./要剪切的文件夹名 ./要改的名字 文件夹改名
+touch  文件名 创建文件
+vim  文件名 编辑文件，如果没有这个文件，创建它，再编辑0
+	一般模式
+		i(光标所在位置的前面) l(行首)  a(光标所在位置的后面)  A(行末)o(下一行)  O(上一行)  从一般模式进入编辑模式
+		yyp 行复制
+			yyppppppppppppppppppppppppppp
+		gg 行首
+		G行末
+		dd删除一行
+		x删除单个字符
+		u 撤销
+		ctrl + r  反撤销
+	编辑模式
+		esc  返回一般模式
+	底行模式
+		：wq保存退出
+		：q不保存退出
+		：q！强制不保存退出（如果修改了）
+		:set  number 显示行号
+		：set nonumber 关闭行号
+		：5  定位到第5行
+tar -cvf 打包后的文件名。tar 要打包的文件名 （tar 打包将一堆文件整合成一个/好像不需要。tar也行，不过名字不变色）
+tar -xvf 要解压的文件名。tar// 解压
+	-v 显示操作过程
+tar -zcf 文件名。tar.gz 文件名 文件名 文件名 。。。。。 压缩文件
+	-z 使用gzip解压/压缩文件
+	-c 建立新的压缩文件
+	-f 指定压缩/解压文件
+tar -zxf 文件名。tar。gz 解压文件
+	-x 从压缩的文件中提取文件
+	-k 保留源文件不被覆盖，如果重复则报错失败
+	
+groupadd 用户组名 创建用户组
+useradd  -g 用户组名  用户名 创建一个用户
+passwd 用户名 设置用户密码
+chmod （-r（文件里的所有子文件）） o（other）/g（group）/u（user）/a（all） +/- w/x/r 文件名或文件夹名（字符授权法）
+	-v 显示修改情况
+	-c 如果文件权限修改了则显示修改情况，反之不显示
+chmod 147  文件名/文件夹名  （4r 2w 1x）（数字授权法）
+uname -a  查看内核版本
+free 查看内存使用情况
+free -h查看另一个内存使用情况
+poweroff 正常关机
+ps -aux 查看所有进程
+ps -aux | -grep xx 查找xx进程
+pstree 查看树状进程
+kill （-9（强制））  进程id
+top  动态的查看进程
+systemctl  start/stop/status/restart/reload 服务名称  -指定服务
+	systemctl  restart  firewalld.services  重启防火墙
+	systemctl  enable/disable  服务名称 开启或关闭开机自启
+setup 查看所有系统服务
+firewall-cmd --state查看防火墙运行状态
+vim /usr/lib/firewalld/services/ssh.xml 修改防火墙放行端口
+rpm
+	rpm  -qa | grep tomcat 是否安装这个软件
+	rpm -ivh  xxxx。rpm  安装rpm包
+	rpm -e  (--nodeps(强制卸载)) xxxx 卸载
+yum
+	yum list  | grep  xx 查询是否有这个软件包
+	yum (-y(yes跳过询问)) install xx 安装软件
+	yum （-y）remove  xxx 卸载软件

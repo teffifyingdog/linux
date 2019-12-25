@@ -1,0 +1,43 @@
+工作区	暂存区	
+git init 初始化git
+	git init 路径
+	git init 项目名称
+git config --list 查看git全局配置
+用户签名
+	$ git config user.name 'wjc'
+	$ git config user.email '2860019549@qq.com'
+系统签名（用户优先于系统）
+	$ git config --global user.name 'wjc'
+	$ git config --global user.email '2860019549@qq.com'
+git add 文件名	提交到暂存区
+	git add .	提交所有包括过滤的	
+	git add -p 添加时会显示每个文件的修改情况
+git rm --cache 文件名 移出暂存区到工作区
+git commit 提交到本地库
+	git commit -m “备注”文件名
+	git commit -m “备注”提交全部
+	git commit -v 提交并显示修改的地方			
+git log 查看git版本
+	git log --oneline 简化内容
+	git reflog	改版本还显示的简化内容.
+git checkout --(空格)文件名 找回删除的文件
+git diff (文件名) 和已经提交的版本比较
+	git diff (文件名) 版本号 比较特定版本
+git branch 分支名 //创建分支
+	git branch -a  显示远程和本地的分支
+	git branch -v 查看所有的分支
+	git branch -d 分支名称 //删除一个分支
+	git branch -D 分支名称 //强制删除一个分支
+git checkout 分支名 //切换到该分支（！切换分支时要注意所有代码提交，不染会把所有文件带到另一个分支）
+git merge 合并的分支 //合并分支
+git remote -v 查看github仓库
+	git remote add 别名 仓库地址 //将一个仓库地址映射到一个别名上
+git push 别名（上面的别名/仓库地址）分支名 //推送到github
+	git push 别名 --all //把所有分支提交到github
+git clone 仓库地址 //克隆仓库到本地
+git pull 别名 分支名 //从仓库跟新代码
+
+
+
+
+

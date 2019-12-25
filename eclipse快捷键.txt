@@ -1,0 +1,6 @@
+alt + shift + L 生成对应值
+ctrl + m 大屏！！！！！！
+ctrl + 1  解决错误
+alt + shift + s 重写toString，get，set方法。。。。。
+ctrl + shift + t 查找所有的类
+ctrl + shift + r 在工作空间查找自己的类
