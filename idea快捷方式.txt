@@ -35,3 +35,4 @@ ctrl + shift + r 全局替换
 ctrl + shift + entry 快速生成大括号
 ctrl + shift + 左右 上一步下一步
 Ctrl + Alt + 鼠标左键 到实现类
+ctrl + F6修改方法参数
